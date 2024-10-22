@@ -1,0 +1,43 @@
+company_name: Example Company
+email: security@example.com
+description: >-
+  This is a default description for SecurityTemplate.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. https://example.com
+bugcrowd_id: # https://docs.bugcrowd.com/v1.0/docs/embedded-submission-form
+
+# Bug bounty platforms
+# If you have an external report form, 
+# /report will redirect to that URL.
+# hackerone_url: https://hackerone.com/YOUR_PAGE
+# bugcrowd_url: https://bugcrowd.com/YOUR_PAGE
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+
+include:
+- .well-known
+
+permalink:       /:year/:title/
+
+defaults:
+    -
+        scope:
+            path: "" # empty string for all files
+            type: pages
+        values:
+            layout: default
+    -
+        scope:
+            path: "" # empty string for all files
+            type: posts
+        values:
+            layout: post
+    -
+        scope:
+            path: ""
+            type: drafts
+        values:
+            layout: post
